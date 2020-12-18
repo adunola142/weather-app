@@ -42,11 +42,11 @@
 
                     <div>
                         <label>Change Location:</label>
-                        <input type="text" id="locationInput" placeholder="eg. Nairobi">
+                        <input type="text" id="locationInput" placeholder="eg. Nairobi" onmouseleave="saveHistory()">
                     </div>
                 </div>
                 <div>
-                    <button class="submit" onclick="getWeatherInfo()">Submit</button>
+                    <button class="submit" id = "submit" onclick="getWeatherInfo()">Submit</button>
                 </div>
                 <span id="quote">No such thing as bad weather, only different kinds of good weather!!!</span>
             </div>

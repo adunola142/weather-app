@@ -146,3 +146,28 @@ getLocation();
 //4. Listen for menu Icon Click
 listenForMenuIcon();
 });
+
+
+function saveHistory(){
+  //Get Data From Input Box
+  var new_data = document.getElementById('locationInput').value
+
+  if(localStorage.getItem('data')== null){
+    localStorage.setItem('data', '[]')
+  }
+var old_data = JSON.parse(localStorage.getItem('data'));
+old_data.push(new_data);
+
+}
+
+function viewHistory(){
+
+  if(localStorage.getItem('data') != null){
+    document.getElementById('history').innerHTML = JSON.parse(localStorage.getItem('data'));
+  }
+
+  
+}
+
+
+
